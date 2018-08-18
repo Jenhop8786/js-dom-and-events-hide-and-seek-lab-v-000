@@ -14,5 +14,15 @@ function increaseRankBy(n) {
       for (let j = 0, k = children.length; j < k; j++) {
         children[j].innerHTML = parseInt(children[j].innerHTML)+n
       }
+
+      function deepestChild() {
+        let node = document.getElementById('grand-node')
+        let childNode = node.children[0]
+         while(childNode) {
+           node = childNode
+           childNode = node.children[0];
+         }
+          return node;
+      }
    }
 }
